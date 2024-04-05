@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Page</title>
+    <script>
+        // Array of quotes
+        var quotes = [
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+            "Believe you can and you're halfway there. - Theodore Roosevelt",
+            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+            "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll"
+            // Add more quotes as needed
+        ];
+
+        // Function to generate a random quote
+        function generateRandomQuote() {
+            var randomNumber = Math.floor(Math.random() * quotes.length);
+            return quotes[randomNumber];
+        }
+
+        // When the page is loaded, generate a random quote and display it
+        window.onload = function() {
+            var randomQuote = generateRandomQuote();
+            document.getElementById('randomQuote').innerText = randomQuote;
+        };
+    </script>
+</head>
+<body>
+    <h1>Random Quote</h1>
+    <p id="randomQuote"></p>
+</body>
+</html>
